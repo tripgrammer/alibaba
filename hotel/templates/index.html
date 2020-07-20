@@ -303,9 +303,9 @@
                                             <div class="input-group multitab-picker"
                                                  is-destination="true">
                                                 <span
-                                                    class="input-group-addon">
+                                                        class="input-group-addon">
                                                 <i
-                                                    class="icon icon-location">
+                                                        class="icon icon-location">
 
                                                 </i>
                                             </span>
@@ -356,14 +356,14 @@
                                             <div class="input-group"><span
                                                     class="input-group-addon">
                                                 <i
-                                                    slot="icon"
-                                                    class="icon icon-calendar"></i>
+                                                        slot="icon"
+                                                        class="icon icon-calendar"></i>
                                             </span>
                                                 <input
-                                                    type="text"
-                                                    placeholder="زمان تور"
-                                                    tabindex="3"
-                                                    class="form-control">
+                                                        type="text"
+                                                        placeholder="زمان تور"
+                                                        tabindex="3"
+                                                        class="form-control">
                                             </div>
                                             <div class="clearfix">
 
@@ -464,7 +464,7 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                
+
                                                     <hr class="hidden-xs mb-1 mt-0">
                                                     <footer class="alibaba-datepicker__footer rtl">
                                                         <div><p
@@ -486,7 +486,7 @@
                                     <div class="col-xs-12 col-md-2 search-date">
                                         <div class="input-group">
                                             <span
-                                                class="input-group-addon">
+                                                    class="input-group-addon">
                                             <i class="icon icon-passenger"></i>
                                         </span>
                                             <div class="v-dropdown mt-1">
@@ -625,298 +625,55 @@
                                         </button>
                                     </div>
                                     <div class="swiper_item_container">
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div
-                                                        class="card-image card-image--loaded">
-                                                    <img src="../static/img/hotel_01.jpg"
-                                                         class="card-image__image">
-                                                    <div class="card-image__card-overlay"></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr">
+
+                                        {% for hotel in hotel_data %}
+                                            <div class="swiper__item"
+                                                 style="padding: 0px 12px; width: 276px;">
+                                                <div class="c-popular-hotel-card">
+                                                    <div class="card-image card-image--loaded">
+                                                        <img src="{{hotel.cover}}"
+                                                             class="card-image__image">
+                                                        <div class="card-image__card-overlay"></div>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="flex font-en ltr">
                                                                 <span
-                                                                        class="text-ellipsis text-darker w-500 font-16 m-0">Hotel #1</span>
-                                                    </div>
-                                                    <div class="ltr">
-                                                        <div
-                                                                class="rate-stars">
-                                                            <i
-                                                                    class="icon-star-rate active"></i>
-                                                            <i
-                                                                    class="icon-star-rate "></i>
-                                                            <i
-                                                                    class="icon-star-rate "></i>
-                                                            <i
-                                                                    class="icon-star-rate "></i>
-                                                            <i
-                                                                    class="icon-star-rate "></i>
+                                                                        class="text-ellipsis text-darker w-500 font-16 m-0">{{ hotel.name }}</span>
                                                         </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong></div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                </a></div>
-                                        </div>
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div
-                                                        class="card-image card-image--loaded">
-                                                    <img
-                                                            src="../static/img/hotel_02.jpg"
-                                                            class="card-image__image">
-                                                    <div
-                                                            class="card-image__card-overlay">
-                                                        <!----></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr"><span
+                                                        <div class="ltr">
+                                                            <div class="rate-stars">
+                                                                {% for i in "x"|rjust:hotel.star %}
+                                                                    <i class="icon-star-rate active"></i>
+                                                                {% endfor %}
 
-                                                            class="text-ellipsis text-darker w-500 font-16 m-0"
-                                                            ‌>Hotel #2</span></div>
-                                                    <div class="ltr">
-                                                        <div
-                                                                class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
+                                                                {% with ''|center:hotel.t as range %}
+                                                                    {% for _ in range %}
+                                                                        <i class="icon-star-rate"></i>
+                                                                    {% endfor %}
+                                                                {% endwith %}
                                                             </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong>
                                                         </div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div
-                                                        class="card-image card-image--loaded">
-                                                    <img
-                                                            src="../static/img/hotel_03.jpg"
-                                                            class="card-image__image">
-                                                    <div
-                                                            class="card-image__card-overlay">
-                                                        <!----></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr"><span
-
-                                                            class="text-ellipsis text-darker w-500 font-16 m-0">Hotel #3</span>
-                                                    </div>
-                                                    <div class="ltr">
+                                                        <hr class="mt-2">
                                                         <div
-                                                                class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
+                                                                class="flex flex-justify-space-between flex-align-center">
+                                                            <div>
+                                                                <div
+                                                                        class="text-gray w-normal">
+                                                                    شروع قیمت از
+                                                                </div>
+                                                                <strong class="text-blue">
+                                                                    {{ hotel.price }} ریال
+                                                                </strong></div>
+                                                            <button
+                                                                    class="btn btn-primary content-btn mt-3">
+                                                                مشاهده
+                                                                و رزرو
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong></div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
                                                 </div>
-                                                </a>
                                             </div>
-                                        </div>
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div
-                                                        class="card-image card-image--loaded">
-                                                    <img
-                                                            src="../static/img/hotel_04.jpg"
-                                                            class="card-image__image">
-                                                    <div
-                                                            class="card-image__card-overlay">
-                                                        <!----></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr"><span
-
-                                                            class="text-ellipsis text-darker w-500 font-16 m-0">Hotel #4 </span>
-                                                    </div>
-                                                    <div class="ltr">
-                                                        <div
-                                                                class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate "></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong></div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div
-                                                        class="card-image card-image--loaded">
-                                                    <img
-                                                            src="../static/img/hotel_05.jpg"
-                                                            class="card-image__image">
-                                                    <div
-                                                            class="card-image__card-overlay">
-                                                        <!----></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr"><span
-
-                                                            class="text-ellipsis text-darker w-500 font-16 m-0">Hotel #5</span>
-                                                    </div>
-                                                    <div class="ltr">
-                                                        <div
-                                                                class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper__item"
-                                             style="padding: 0px 12px; width: 276px;">
-                                            <div
-                                                    class="c-popular-hotel-card">
-                                                <div class="card-image card-image--loaded">
-                                                    <img src="../static/img/hotel_06.jpg" class="card-image__image">
-                                                    <div class="card-image__card-overlay"></div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex font-en ltr"><span
-
-                                                            class="text-ellipsis text-darker w-500 font-16 m-0">Hotel #6</span>
-                                                    </div>
-                                                    <div class="ltr">
-                                                        <div
-                                                                class="rate-stars">
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                            <i class="icon-star-rate "></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div
-                                                            class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div
-                                                                    class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong></div>
-                                                        <button
-                                                                class="btn btn-primary content-btn mt-3">
-                                                            مشاهده
-                                                            و رزرو
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </section>

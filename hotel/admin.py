@@ -12,7 +12,7 @@ admin.site.register(UserProfile, UserProfileAdmin)
 
 class HotelAdmin(admin.ModelAdmin):
     search_fields = ['name', 'city']
-    list_display = ['name', 'star', 'city']
+    list_display = ['name', 'star', 'price', 'city']
 
 
 admin.site.register(Hotel, HotelAdmin)

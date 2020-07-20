@@ -24,6 +24,7 @@ class Hotel(models.Model):
     cover = models.FileField(upload_to='files/hotel_cover/', null=False, blank=False, validators=[validate_file_extension])
     star = models.IntegerField(default=0, blank=False)
     city = models.CharField(max_length=128, null=False, blank=False)
+    price = models.IntegerField(default=0, blank=False)
     # content = RichTextField()
     # created_at = models.DateTimeField(default=datetime.now, blank=False)
 

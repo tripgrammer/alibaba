@@ -17,19 +17,19 @@
             <div class="header-container">
                 <div class="alibaba-maintenance">
                     <div class="alert text-center">
-            <span class="svg-icon ml-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor"
-                     class="alibaba-maintenance__close">
-                    <path d="M18 35c9.3888 0 17-7.6112 17-17S27.3888 1 18 1 1 8.6112 1 18s7.6112 17 17 17zm0 1C8.0589 36 0 27.9411 0 18S8.0589 0 18 0s18 8.0589 18 18-8.0589 18-18 18zm0-18.7071l7.1464-7.1465a.5.5 0 01.7072.7072L18.707 18l7.1465 7.1464a.5.5 0 01-.7072.7072L18 18.707l-7.1464 7.1465a.5.5 0 01-.7072-.7072L17.293 18l-7.1465-7.1464a.5.5 0 01.7072-.7072L18 17.293z"></path>
-                </svg>
-            </span>
+                        <span class="svg-icon ml-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor"
+                                 class="alibaba-maintenance__close">
+                                <path d="M18 35c9.3888 0 17-7.6112 17-17S27.3888 1 18 1 1 8.6112 1 18s7.6112 17 17 17zm0 1C8.0589 36 0 27.9411 0 18S8.0589 0 18 0s18 8.0589 18 18-8.0589 18-18 18zm0-18.7071l7.1464-7.1465a.5.5 0 01.7072.7072L18.707 18l7.1465 7.1464a.5.5 0 01-.7072.7072L18 18.707l-7.1464 7.1465a.5.5 0 01-.7072-.7072L17.293 18l-7.1465-7.1464a.5.5 0 01.7072-.7072L18 17.293z"></path>
+                            </svg>
+                        </span>
                         <span class="mx-1"> پروژه درس مهندسی اینترنت </span>
                     </div>
                 </div>
                 <header class="site-header">
                     <h1 class="hidden-xs hidden-sm seo-only">خرید آنلاین بلیط هواپیما، قطار و اتوبوس</h1>
                     <nav class="main-navigation">
-                        <a class="logo-alibaba-home ml-3-sm inline-block nuxt-link-active">
+                        <a href="{% url 'index' %}" class="logo-alibaba-home ml-3-sm inline-block nuxt-link-active">
                             <img src="../static/svg/logo.f05d292.svg" alt="لوگو علی بابا" width="50"
                                  class="inline-block v-middle">
                             <div class="inline-block v-middle">
@@ -123,8 +123,8 @@
                                 </a>
                             </li>
                             <li class="main-navigation__item login">
-                                <button aria-label="User" type="button" data-test="headerUserButton"
-                                        class="main-navigation__button">
+                                <a href="{% url 'login' %}" aria-label="User" type="button" data-test="headerUserButton"
+                                   class="main-navigation__button">
                                     <span data-test="headerUserFullName" class="hidden-xs ml-2-md login-label rtl">
                                         ورود - ثبت نام</span>
                                     <svg width="27px" height="27px" viewBox="0 0 24 24" version="1.1"
@@ -134,7 +134,7 @@
                                             <path d="M12,10.5 C14.6233526,10.5 16.75,8.37335256 16.75,5.75 C16.75,3.12664744 14.6233526,1 12,1 C9.37664744,1 7.25,3.12664744 7.25,5.75 C7.25,8.37335256 9.37664744,10.5 12,10.5 Z M12,11.5 C8.82436269,11.5 6.25,8.92563731 6.25,5.75 C6.25,2.57436269 8.82436269,0 12,0 C15.1756373,0 17.75,2.57436269 17.75,5.75 C17.75,8.92563731 15.1756373,11.5 12,11.5 Z M22,24 C22,18.4771525 17.5228475,14 12,14 C6.4771525,14 2,18.4771525 2,24 L1,24 C1,17.9248678 5.92486775,13 12,13 C18.0751322,13 23,17.9248678 23,24 L22.5,24 L22,24 Z"></path>
                                         </g>
                                     </svg> <!---->
-                                </button> <!---->
+                                </a> <!---->
                             </li>
                             <li class="hidden-xs line-border"></li>
                             <li class="main-navigation__item support hidden-xs">
@@ -631,7 +631,7 @@
                                                  style="padding: 0px 12px; width: 276px;">
                                                 <div class="c-popular-hotel-card">
                                                     <div class="card-image card-image--loaded">
-                                                        <img src="{{hotel.cover}}"
+                                                        <img src="{{ hotel.cover }}"
                                                              class="card-image__image">
                                                         <div class="card-image__card-overlay"></div>
                                                     </div>

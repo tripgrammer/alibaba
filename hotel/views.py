@@ -23,3 +23,7 @@ class IndexPage(TemplateView):
         }
 
         return render(request, 'index.html', context)
+
+
+class LoginPage(TemplateView):
+    template_name = "login.html"

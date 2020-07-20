@@ -59,7 +59,4 @@ fc6cc9d6d3d7        nginx_nginx         "nginx -g 'daemon of…"   2 hours ago  
 05103904dcb8        ae80efb17475        "gunicorn --chdir bl…"   2 hours ago         Up 2 hours          0.0.0.0:8000->8000/tcp   blogpy
 4a183e90a9eb        postgres:10         "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:5432->5432/tcp   blogpy_postgresql
 ```
-**nginx** container as common web server, **blogpy** container as django application and **blogpy_postgresql** as postgreSQL database container.
-
-## Contributing
-Contributions are  **welcome**  and will be fully  **credited**. I'd be happy to accept PRs for template extending.
+**nginx** container as common web server, **alibaba** container as django application and **alibaba_postgresql** as postgreSQL database container.

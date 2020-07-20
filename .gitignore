@@ -1,0 +1,5 @@
+#Mac Stuff
+.idea/
+
+#Virtual Env
+venv/

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html data-n-head-ssr="" lang="fa" data-n-head="lang" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body class="" data-n-head="class">
+<div data-server-rendered="true" id="__nuxt">
+    <div id="__layout">
+        <main class="bg-gray main-wrapper">
+            <div class="container">
+                <div class="profile-login">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-sm-6 hidden-xs login-modal__info"><h5>نکاتی برای امنیت بیشتر</h5>
+                                <ul>
+                                    <li>نام کاربری و رمز خود را در اختیار سایرین قرار ندهید.</li>
+                                    <li>از رمز عبوری استفاده کنید که حدس زدن آن برای دیگران غیرممکن باشد.</li>
+                                    <li>پس از خرید بلیط در فضاهای اشتراکی مثل کافی‌نت‌ها، حتما از حساب خود خارج
+                                        شوید.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <form action="login" novalidate="novalidate"
+                                      class="user-menu__login-form validated-form">
+                                    <div class="form-group">
+                                        <label for="modal-login-email">ایمیل یا شماره همراه خود
+                                            را وارد کنید</label>
+                                        <input type="email" name="email" id="modal-login-email"
+                                               tabindex="10" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="modal-login-password">
+                                            رمز عبور خود را وارد کنید
+                                        </label>
+                                        <input type="password" name="password"
+                                               id="modal-login-password" value="" class="form-control">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block" value="Login">
+                                        وارد شوید
+                                        <span class="dots" style="display:none;">...</span>
+                                    </button>
+                                </form>
+                                <a class="user-menu__forget-password">بازیابی رمز عبور</a>
+                                <h5 class="user-menu__title">حساب کاربری ندارید؟</h5>
+                                <a class="btn btn-block btn-success login-page-sign-up">ثبت نام کنید</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,9 +1,6 @@
 # Internet Engineering Project
 
-Alibaba is a simple application written by Python3 & Django2.2. This project is for Internet Engineering Course.
-
-##  Demo
-[Final project preview.](https://i.imgur.com/KJ66n8T.jpg)
+Alibaba is a simple application written by Python3 & Django2.2.
 
 ## Technologies used in this course
 
@@ -25,13 +22,13 @@ $ https://github.com/tripgrammer/alibaba.git
 Then create **docker network** and **volumes** as below.
 
 ```sh
-$ docker volume create blogpy_postgresql
-$ docker volume create blogpy_static_volume
-$ docker volume create blogpy_files_volume
+$ docker volume create alibaba_postgresql
+$ docker volume create alibaba_static_volume
+$ docker volume create alibaba_files_volume
 ```
 ```sh
 $ docker network create nginx_network
-$ docker network create blogpy_network
+$ docker network create alibaba_network
 ```
 You need to create .env file in the project root file with default values.
 ```sh
@@ -48,7 +45,7 @@ Then run nginx container with **docker-compose**.
 $ cd config/nginx/
 $ docker-compose up -d
 ```
-You can see blogpy web page on http://localhost, Template and API's are accessable by  docker containers which you can see with below command.
+You can see alibaba web page on http://localhost, Template and API's are accessable by  docker containers which you can see with below command.
 ```sh
 $ docker ps -a
 ```
@@ -56,7 +53,7 @@ $ docker ps -a
 ```sh
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 fc6cc9d6d3d7        nginx_nginx         "nginx -g 'daemon of…"   2 hours ago         Up 2 hours          0.0.0.0:80->80/tcp       nginx
-05103904dcb8        ae80efb17475        "gunicorn --chdir bl…"   2 hours ago         Up 2 hours          0.0.0.0:8000->8000/tcp   blogpy
-4a183e90a9eb        postgres:10         "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:5432->5432/tcp   blogpy_postgresql
+05103904dcb8        ae80efb17475        "gunicorn --chdir bl…"   2 hours ago         Up 2 hours          0.0.0.0:8000->8000/tcp   alibaba
+4a183e90a9eb        postgres:10         "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:5432->5432/tcp   alibaba_postgresql
 ```
 **nginx** container as common web server, **alibaba** container as django application and **alibaba_postgresql** as postgreSQL database container.

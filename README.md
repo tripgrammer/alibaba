@@ -4,7 +4,7 @@ Alibaba is a simple application written by Python3 & Django2.2.
 
 ## Technologies used in this course
 
-This project and video series are best practices for Backend Engineering with Python and Django and the most common technologies every backend engineer should know. Technologies used in this course are listed below.
+Technologies used in this course are listed below.
 -   [Python 3.x](https://www.python.org/) - Programming Language
 -   [Django 2.2.x](https://www.djangoproject.com/) - Powerful Web Framework
 -   [Gunicorn](https://gunicorn.org/) - WSGI HTTP Server
